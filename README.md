@@ -1,33 +1,5 @@
-#### [号卡中心-专注优质号卡套餐服务](https://hk.bjjii.com/?p=ookk)
-<a href="https://hk.bjjii.com/?p=ookk">
-<img src="https://img1.131213.xyz/file/9c3e8df16c352c05233ed.png" height="50%" width="50%" /></a>
 
-
----
-### Demo
-
-[https://chatai.451024.xyz](https://chatai.451024.xyz)
-
-> api
-
-```url
-https://openai.451024.xyz
-```
-
-
-```url
-https://openai-proxy-api.pages.dev/api
-```
-***
-
->  新项目 [基于OpenAI的微信机器人](https://github.com/x-dr/wechat-bot)
-
-***
-
-### 演示站为公共服务，如有大规模使用需求请自行部署，演示站有点不堪重负
-
-![worker](./docs/img/worker.png)
-
+# chatgptProxyAPI
 
 ## 利用Cloudflare Worker中转api.openai.com
 
@@ -36,14 +8,9 @@ https://openai-proxy-api.pages.dev/api
 3. 给 Worker 绑定一个没有被墙的域名
 4. 使用自己的域名代替 api.openai.com
 
-
 **[详细教程](./docs/cloudflare_workers.md)**
 
-
-
 ***
-
-
 
 ## 使用CloudFlare Pages进行中转
 
@@ -51,33 +18,22 @@ https://openai-proxy-api.pages.dev/api
 
 > [官方文档](https://developers.cloudflare.com/pages)
 
-1. ~~Fork本项目~~ 点击[Use this template](https://github.com/x-dr/chatgptProxyAPI/generate)按钮创建一个新的代码库。
+1. 点击[Use this template](https://github.com/x-dr/chatgptProxyAPI/generate)按钮创建一个新的代码库。
 2. 登录到[Cloudflare](https://dash.cloudflare.com/)控制台.
-3. 在帐户主页中，选择`pages`> ` Create a project` > `Connect to Git`
+3. 在帐户主页中，选择`pages`> `Create a project` > `Connect to Git`
 4. 选择你 Fork 的项目存储库，在`Set up builds and deployments`部分中，全部默认即可。
-
 
 5. 点击`Save and Deploy`部署，然后点`Continue to project`即可看到访问域名
 
-
 > 把官方接口的`https://api.openai.com`替换为`https://xxx.pages.dev` 即可
-
-**Demo**
-
-[https://chatai.451024.xyz](https://chatai.451024.xyz)
 
 **[详细教程](./docs/cloudflare_pages.md)**
 
-
 ### 2、只部署中转API
-
 
 **[详细教程](./docs/cloudflare_proxy_pages.md)**
 
-
-
-
-## docker 部署（要境外vps） 
+## docker 部署（要境外vps）
 
 > 好像不支持sse 所以不建议
 
@@ -94,7 +50,9 @@ docker run -itd --name openaiproxy \
 
 #### 使用
 
-*api : http://vpsip:3000/proxy/v1/chat/completions*
+#### API Endpoint
+
+http://vpsip:3000/proxy/v1/chat/completions
 
 ```bash
 curl --location 'http://vpsip:3000/proxy/v1/chat/completions' \
@@ -109,10 +67,7 @@ curl --location 'http://vpsip:3000/proxy/v1/chat/completions' \
 
 </details>
 
-
-
 ## 用法
-
 
 <details>
 
@@ -144,8 +99,6 @@ fetch("https://openai.1rmb.tk/v1/chat/completions", requestOptions)
 ```
 
 </details>
-
-
 
 <details>
 
@@ -185,8 +138,6 @@ except json.JSONDecodeError as e:
 
 </details>
 
-
-
 <details>
 <summary>用nodejs chatgpt库</summary>
 
@@ -213,8 +164,6 @@ example()
 ```
 
 </details>
-
-
 
 <details>
 
@@ -255,8 +204,3 @@ example()
 ```
 
 </details>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=x-dr/chatgptProxyAPI&type=Date)](https://star-history.com/#x-dr/chatgptProxyAPI&Date)
-

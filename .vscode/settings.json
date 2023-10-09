@@ -1,0 +1,12 @@
+{
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true,
+  },
+  "markdownlint.config": {
+    "MD033": {
+      "allowed_elements": ["nobr", "sup", "a", "details", "summary"],
+    },
+    "MD001": false,
+  }
+}
